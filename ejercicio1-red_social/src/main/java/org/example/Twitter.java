@@ -10,6 +10,14 @@ public class Twitter {
         this.usuarios = new ArrayList<Usuario>();
     }
 
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void agregarUsuario(Usuario user){
+        this.usuarios.add(user);
+    }
+
     public void borrarUsuario(String name){
         this.usuarios.removeIf(u -> u.eliminarUsuario(name));
     }
