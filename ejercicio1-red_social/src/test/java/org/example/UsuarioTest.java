@@ -16,8 +16,8 @@ class UsuarioTest {
 
     @Test
     void borrarTweets() {
-        assertEquals(this.user.getTweets().size(), 1);
+        assertEquals(1, this.user.getTweets().size());
         this.user.borrarTweets();
-        assertEquals(this.user.getTweets().size(), 0);
+        assertEquals(0, this.user.getTweets().size());
     }
 }

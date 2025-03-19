@@ -1,0 +1,36 @@
+@startuml
+
+interface Post {
+    + esDe(String name)
+}
+
+class Tweet implements Post {
+    - String mensaje
+    + Tweet(String mensaje)
+    + esDe(String name)
+}
+
+class Retweet implements Post {
+    - Tweet origen
+    + Retweet(Tweet origen)
+    + esDe(String name)
+}
+
+class Usuario {
+    - String screenName
+    - List<Tweet> tweets
+}
+
+class Twitter {
+    - List<Usuario> usuarios
+    + Twitter()
+    + List<Usuario> getUsuarios()
+    + void agregarUsuario(Usuario user)
+    + void borrarUsuario(String name)
+}
+
+Usuario "1" -- "*" Tweet : hace
+Twitter "1" -- "*" Usuario : gestiona
+Retweet -> "1" Tweet : basado_en
+
+@enduml

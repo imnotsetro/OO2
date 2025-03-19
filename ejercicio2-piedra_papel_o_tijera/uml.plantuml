@@ -1,0 +1,57 @@
+@startuml
+
+interface Jugada {
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+Class Papel implements Jugada{
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+Class Piedra implements Jugada{
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+Class Tijera implements Jugada{
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+Class Spock implements Jugada{
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+Class Lagarto implements Jugada{
+    + jugarContra(Jugada jugada)
+    + jugarContraPiedra()
+    + jugarContraPapel()
+    + jugarContraTijera()
+    + jugarContraLagarto()
+    + jugarContraSpock()
+}
+
+@enduml

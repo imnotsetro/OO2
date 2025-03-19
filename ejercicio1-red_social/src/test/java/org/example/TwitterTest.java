@@ -22,10 +22,10 @@ class TwitterTest {
         this.tw.agregarUsuario(user2);
         Usuario user3 = new Usuario("Veronica");
         this.tw.agregarUsuario(user3);
-        assertEquals(this.tw.getUsuarios().size(), 3);
+        assertEquals(3, this.tw.getUsuarios().size());
         assertTrue(this.tw.getUsuarios().contains(user2));
         this.tw.borrarUsuario("Martin");
-        assertEquals(this.tw.getUsuarios().size(), 2);
+        assertEquals(2, this.tw.getUsuarios().size());
         assertFalse(this.tw.getUsuarios().contains(user2));
     }
 
