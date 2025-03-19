@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ejercicio2-piedra_papel_o_tijera" />
-        <module name="ejercicio1-red_social" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ejercicio1-red_social" target="11" />
+      <module name="ejercicio2-piedra_papel_o_tijera" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
