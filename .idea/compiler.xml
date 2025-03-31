@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="biblioteca" />
         <module name="ejercicio2-piedra_papel_o_tijera" />
+        <module name="biblioteca" />
+        <module name="patrones-ejercicio2-calculo_de_sueldos" />
+        <module name="biblioteca (1)" />
         <module name="ejercicio1-red_social" />
       </profile>
     </annotationProcessing>
