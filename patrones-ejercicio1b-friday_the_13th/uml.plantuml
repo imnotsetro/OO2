@@ -15,6 +15,7 @@ class Socio {
 	- String legajo;
 	- String email;
 
+    + exportarSocio(): JSONObject
 	+ getNombre(): String
 	+ setNombre(String nombre)
     + getLegajo(): String
@@ -25,7 +26,6 @@ class Socio {
 
 class VoorheesEporteer {
 
-    + exportar(Socio socio): String
     + exportar(List<Socio> socios): String
 }
 

@@ -1,5 +1,7 @@
 package ar.edu.unlp.info.oo2.biblioteca;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,10 @@ public class Biblioteca {
 	 */
 	public String exportarSocios() {
 		return exporter.exportar(socios);
+	}
+
+	public String exportarSociosJackson() throws JsonProcessingException {
+		return exporter.exportarJackson(socios);
 	}
 
 	public VoorheesExporter getExporter() {

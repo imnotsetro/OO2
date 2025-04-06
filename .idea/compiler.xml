@@ -9,7 +9,9 @@
         <module name="ejercicio2-piedra_papel_o_tijera" />
         <module name="biblioteca" />
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
+        <module name="patrones-ejercicio3-media_player" />
         <module name="biblioteca (1)" />
+        <module name="patrones-ejercicio4-todoitem" />
         <module name="ejercicio1-red_social" />
       </profile>
     </annotationProcessing>

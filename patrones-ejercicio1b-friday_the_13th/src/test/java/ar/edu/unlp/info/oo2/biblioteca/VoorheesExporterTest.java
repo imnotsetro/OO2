@@ -1,5 +1,6 @@
 package ar.edu.unlp.info.oo2.biblioteca;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,19 +18,13 @@ class VoorheesExporterTest {
 
     @Test
     void exportar() {
-        String jsonString = """
-                [
-                    {
-                        "nombre": "Arya Stark",
-                        "email": "needle@stark.com",
-                        "legajo": "5234-5"
-                    },
-                    {
-                        "nombre": "Tyron Lannister",
-                        "email": "tyron@thelannisters.com",
-                        "legajo": "2345-2"
-                    }
-                ]""";
+        String jsonString = "[{\"legajo\":\"5234-5\",\"nombre\":\"Arya Stark\",\"email\":\"needle@stark.com\"},{\"legajo\":\"2345-2\",\"nombre\":\"Tyron Lannister\",\"email\":\"tyron@thelannisters.com\"}]";
         assertEquals(jsonString, biblioteca.exportarSocios());
+    }
+
+    @Test
+    void exportarJackson() throws JsonProcessingException {
+        String jsonString = "[{\"nombre\":\"Arya Stark\",\"legajo\":\"5234-5\",\"email\":\"needle@stark.com\"},{\"nombre\":\"Tyron Lannister\",\"legajo\":\"2345-2\",\"email\":\"tyron@thelannisters.com\"}]";
+        assertEquals(jsonString, biblioteca.exportarSociosJackson());
     }
 }

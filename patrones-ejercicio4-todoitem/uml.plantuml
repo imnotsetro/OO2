@@ -1,0 +1,67 @@
+@startuml
+
+class ToDoItem {
+    - String name;
+    - List<String> comments;
+    - LocalDate started;
+    - LocalDate finished;
+
+    + getName(): String
+    + getState(): State
+    + getStarted(): LocalDate
+    + getFinished(): LocalDate
+    + setName(String name)
+    + setState(State state)
+    + setStarted(LocalDate started)
+    + setFinished(LocalDate finished)
+    + addCommentToList(String comment)
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+interface State {
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+class Finished implements State {
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+class Inprogress implements State {
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+class Paused implements State {
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+class Pending implements State {
+    + start(ToDoItem item)
+    + togglePause(ToDoItem item)
+    + finish(ToDoItem item)
+    + workedTime(ToDoItem item): Duration
+    + addComment(ToDoItem item, String comment)
+}
+
+ToDoItem -> State : State 1
+
+@enduml
