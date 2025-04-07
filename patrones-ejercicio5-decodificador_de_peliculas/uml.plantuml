@@ -1,0 +1,32 @@
+@startuml
+
+class Decodificador {
+}
+
+class Pelicula {
+    -String titulo
+    -int estreno
+    -List<Pelicula> similares
+    -double puntaje
+}
+
+interface CriterioSugerencia {
+    +sugerir(): List<pelicula>
+}
+
+class Novedad implements CriterioSugerencia {
+    +sugerir(): List<pelicula>
+}
+
+class Similaridad implements CriterioSugerencia {
+    +sugerir(): List<pelicula>
+}
+
+class Puntaje implements CriterioSugerencia {
+    +sugerir(): List<pelicula>
+}
+
+Decodificador -> CriterioSugerencia : criterio
+Decodificador -> Pelicula : grilla *
+Decodificador -> Pelicula : reproduce *
+@enduml

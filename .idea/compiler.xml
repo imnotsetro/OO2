@@ -11,6 +11,7 @@
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
         <module name="patrones-ejercicio3-media_player" />
         <module name="biblioteca (1)" />
+        <module name="patrones-ejercicio5-decodificador_de_peliculas" />
         <module name="patrones-ejercicio4-todoitem" />
         <module name="ejercicio1-red_social" />
       </profile>
