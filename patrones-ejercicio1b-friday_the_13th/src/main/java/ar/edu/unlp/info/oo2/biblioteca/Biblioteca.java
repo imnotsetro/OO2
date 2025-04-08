@@ -11,7 +11,23 @@ public class Biblioteca {
 
 	public Biblioteca() {
 		socios = new ArrayList<>();
-		exporter= new VoorheesExporter(); 
+		exporter= new VoorheesExporter();
+	}
+
+	public List<Socio> getSocios() {
+		return socios;
+	}
+
+	public void setSocios(List<Socio> socios) {
+		this.socios = socios;
+	}
+
+	public VoorheesExporter getExporter() {
+		return exporter;
+	}
+
+	public void setExporter(VoorheesExporter exporter) {
+		this.exporter = exporter;
 	}
 
 	public void agregarSocio(Socio socio) {
@@ -21,19 +37,7 @@ public class Biblioteca {
 	/**
 	 * Retorna la representación JSON de la colección de socios.
 	 */
-	public String exportarSocios() {
+	public String exportarSocios() throws JsonProcessingException {
 		return exporter.exportar(socios);
-	}
-
-	public String exportarSociosJackson() throws JsonProcessingException {
-		return exporter.exportarJackson(socios);
-	}
-
-	public VoorheesExporter getExporter() {
-		return exporter;
-	}
-
-	public void setExporter(VoorheesExporter exporter) {
-		this.exporter = exporter;
 	}
 }

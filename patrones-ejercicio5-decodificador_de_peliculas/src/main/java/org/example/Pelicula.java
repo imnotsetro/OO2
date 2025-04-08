@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Pelicula {
@@ -12,7 +13,7 @@ public class Pelicula {
     public Pelicula(String titulo, int anioEstreno, double puntaje) {
         this.titulo = titulo;
         this.anioEstreno = anioEstreno;
-        this.similares = new ArrayList<>();
+        this.similares = new ArrayList<Pelicula>();
         this.puntaje = puntaje;
     }
 

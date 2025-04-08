@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ejercicio2-piedra_papel_o_tijera" />
+        <module name="patrones-ejercicio7-calculadora" />
         <module name="biblioteca" />
+        <module name="patrones-ejercicio6-excursiones" />
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
+        <module name="biblioteca (2)" />
         <module name="patrones-ejercicio3-media_player" />
         <module name="biblioteca (1)" />
         <module name="patrones-ejercicio5-decodificador_de_peliculas" />

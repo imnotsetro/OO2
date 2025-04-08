@@ -28,5 +28,5 @@ class Puntaje implements CriterioSugerencia {
 
 Decodificador -> CriterioSugerencia : criterio
 Decodificador -> Pelicula : grilla *
-Decodificador -> Pelicula : reproduce *
+Decodificador -> Pelicula : visto *
 @enduml

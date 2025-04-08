@@ -17,14 +17,16 @@ class VoorheesExporterTest {
     }
 
     @Test
-    void exportar() {
+    void exportar() throws JsonProcessingException {
         String jsonString = "[{\"legajo\":\"5234-5\",\"nombre\":\"Arya Stark\",\"email\":\"needle@stark.com\"},{\"legajo\":\"2345-2\",\"nombre\":\"Tyron Lannister\",\"email\":\"tyron@thelannisters.com\"}]";
+        biblioteca.setExporter(new AdaptadorJsonSimple());
         assertEquals(jsonString, biblioteca.exportarSocios());
     }
 
     @Test
     void exportarJackson() throws JsonProcessingException {
         String jsonString = "[{\"nombre\":\"Arya Stark\",\"legajo\":\"5234-5\",\"email\":\"needle@stark.com\"},{\"nombre\":\"Tyron Lannister\",\"legajo\":\"2345-2\",\"email\":\"tyron@thelannisters.com\"}]";
-        assertEquals(jsonString, biblioteca.exportarSociosJackson());
+        biblioteca.setExporter(new AdaptadorJackson());
+        assertEquals(jsonString, biblioteca.exportarSocios());
     }
 }

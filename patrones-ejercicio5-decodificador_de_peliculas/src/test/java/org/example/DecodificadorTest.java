@@ -17,11 +17,6 @@ class DecodificadorTest {
         Pelicula tenet = new Pelicula("Tenet", 2020, 7.5);
         Pelicula interstellar = new Pelicula("Interstellar", 2014, 8.6);
         Pelicula dune = new Pelicula("Dune", 2021, 8.1);
-        List<Pelicula> peliculasDisponibles = List.of(
-                matrix, inception, tenet, interstellar, dune
-        );
-        // Primer usuario: vio películas más nuevas
-        List<Pelicula> peliculasVistas = List.of(dune, tenet);
         // Establecer similitudes
         matrix.agregarSimilar(inception);       // Matrix <-> Inception
         inception.agregarSimilar(matrix);
@@ -30,12 +25,18 @@ class DecodificadorTest {
         dune.agregarSimilar(interstellar);
         interstellar.agregarSimilar(dune);  // Dune <-> Interstellar
 
+        // Lista de peliculas en grilla
+        List<Pelicula> peliculasDisponibles = List.of(
+                matrix, inception, tenet, interstellar, dune
+        );
+        // Primer usuario: vio películas más nuevas
+        List<Pelicula> peliculasVistas = List.of(dune);
+
         CriterioSugerencia criterio = new Similaridad();
 
         decodificador = new Decodificador(peliculasDisponibles, peliculasVistas, criterio);
 
-
-        List<Pelicula> expected = List.of(dune, tenet, interstellar);
+        List<Pelicula> expected = List.of(tenet, dune);
         assertEquals(expected, decodificador.sugerir());
 
         decodificador.setCriterio(new Puntaje());

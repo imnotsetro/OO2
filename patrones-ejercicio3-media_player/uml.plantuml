@@ -21,7 +21,7 @@ class VideoStream {
 }
 
 class MediaAdapter extends VideoStream{
-    + reproduce()
+    + play()
 }
 
 MediaAdapter -> MediaPlayer : adaptando
