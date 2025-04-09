@@ -1,25 +1,30 @@
 package org.example;
 
-import java.util.LinkedList;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Excursion {
-    private Aplicacion aplicacion;
+public class Excursion {
     private String nombre;
-    private String fechaInicio;
-    private String fechaFin;
-    private String puntoDeEncuentro;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
+    private String puntoEncuentro;
     private double costo;
+    private int cupoMinimo;
+    private int cupoMaximo;
     private List<Usuario> inscriptos;
+    private Estado estado;
 
-    public Excursion(Aplicacion aplicacion, String nombre, String fechaInicio, String fechaFin, String puntoDeEncuentro, double costo, List<Usuario> inscriptos) {
-        this.aplicacion = aplicacion;
+    public Excursion(String nombre, LocalDate fechaInicio, LocalDate fechaFin, String puntoEncuentro, double costo, int cupoMinimo, int cupoMaximo) {
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.puntoDeEncuentro = puntoDeEncuentro;
+        this.puntoEncuentro = puntoEncuentro;
         this.costo = costo;
-        this.inscriptos = inscriptos;
+        this.cupoMinimo = cupoMinimo;
+        this.cupoMaximo = cupoMaximo;
+        this.inscriptos = new ArrayList<>();
+        this.estado = new EstadoProvisoria(this);
     }
 
     public String getNombre() {
@@ -30,28 +35,28 @@ public abstract class Excursion {
         this.nombre = nombre;
     }
 
-    public String getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(String fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public String getFechaFin() {
+    public LocalDate getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(String fechaFin) {
+    public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 
-    public String getPuntoDeEncuentro() {
-        return puntoDeEncuentro;
+    public String getPuntoEncuentro() {
+        return puntoEncuentro;
     }
 
-    public void setPuntoDeEncuentro(String puntoDeEncuentro) {
-        this.puntoDeEncuentro = puntoDeEncuentro;
+    public void setPuntoEncuentro(String puntoEncuentro) {
+        this.puntoEncuentro = puntoEncuentro;
     }
 
     public double getCosto() {
@@ -62,6 +67,22 @@ public abstract class Excursion {
         this.costo = costo;
     }
 
+    public int getCupoMinimo() {
+        return cupoMinimo;
+    }
+
+    public void setCupoMinimo(int cupoMinimo) {
+        this.cupoMinimo = cupoMinimo;
+    }
+
+    public int getCupoMaximo() {
+        return cupoMaximo;
+    }
+
+    public void setCupoMaximo(int cupoMaximo) {
+        this.cupoMaximo = cupoMaximo;
+    }
+
     public List<Usuario> getInscriptos() {
         return inscriptos;
     }
@@ -70,5 +91,33 @@ public abstract class Excursion {
         this.inscriptos = inscriptos;
     }
 
-    abstract void inscribir (Usuario unUsuario);
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public void inscribir(Usuario usuario) {
+        this.estado.inscribir(usuario, this);
+    }
+
+    public String obtenerInformacion() {
+        return this.estado.obtenerInformacion(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Excursion{" +
+                "nombre='" + nombre + '\'' +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaFin=" + fechaFin +
+                ", puntoEncuentro='" + puntoEncuentro + '\'' +
+                ", costo=" + costo +
+                ", cupoMinimo=" + cupoMinimo +
+                ", cupoMaximo=" + cupoMaximo +
+                ", inscriptos=" + inscriptos +
+                ", estado=" + estado;
+    }
 }
