@@ -1,8 +1,9 @@
 package org.example;
 
-public class OperacionRestar implements Operacion{
+public class OperacionRestar extends OperacionComun{
 
     public void setValor(double unValor, Calculadora calculadora) {
-        calculadora.setValor(Double.parseDouble(calculadora.getValorAcumulado()) - unValor);
+        calculadora.setValorAcumulado(String.valueOf(Double.parseDouble(calculadora.getValorAcumulado()) - unValor));
+        calculadora.setOperacion(new OperacionInicial());
     }
 }

@@ -40,6 +40,7 @@ public class Calculadora {
      */
     public void borrar() {
         this.setValorAcumulado(String.valueOf(0));
+        this.setOperacion(new OperacionInicial());
     }
 
 
@@ -49,6 +50,22 @@ public class Calculadora {
      */
     public void setValor(double unValor) {
         this.operacion.setValor(unValor, this);
+    }
+
+    public void mas(){
+        this.operacion.mas(this);
+    }
+
+    public void menos(){
+        this.operacion.menos(this);
+    }
+
+    public void por(){
+        this.operacion.por(this);
+    }
+
+    public void dividido(){
+        this.operacion.dividido(this);
     }
 
 }
