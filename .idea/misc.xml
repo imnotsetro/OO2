@@ -17,7 +17,15 @@
         <option value="$PROJECT_DIR$/patrones-ejercicio6-excursiones/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio7-calculadora/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio8-dispositivo_movil_y_conexiones/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio9-alquiler_de_automoviles/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio10-mensajero/pom.xml" />
+        <option value="$USER_HOME$/Downloads/encriptadores/Encriptador/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$USER_HOME$/Downloads/encriptadores/Encriptador/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">

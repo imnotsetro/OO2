@@ -1,0 +1,61 @@
+@startuml
+
+class Usuario{
+    -nombre: String
+}
+
+class AutoEnAlquiler{
+    -precioPorDia: Real
+    -cantidadPlazas: Integer
+    -marca: String
+}
+
+class Reserva{
+    -cantidadDias: Integer
+    -fecha: Date
+
+    +montoAPagar(): Real
+    +montoAReembolsar(LocalDate fecha, double montoAPagar): Real
+    +cambiarPoliticaEstricta()
+    +cambiarPoliticaModerada()
+    +cambiarPoliticaFlexible()
+}
+
+interface PoliticaRembolso{
+
+    +montoAReembolsar(LocalDate fecha, double montoAPagar): Real
+    +cambiarPoliticaEstricta()
+    +cambiarPoliticaModerada()
+    +cambiarPoliticaFlexible()
+}
+
+class PoliticaFlexible implements PoliticaRembolso{
+
+    +montoAReembolsar(LocalDate fecha, double montoAPagar): Real
+    +cambiarPoliticaEstricta()
+    +cambiarPoliticaModerada()
+    +cambiarPoliticaFlexible()
+}
+
+class PoliticaModerada implements PoliticaRembolso{
+
+    +montoAReembolsar(LocalDate fecha, double montoAPagar): Real
+    +cambiarPoliticaEstricta()
+    +cambiarPoliticaModerada()
+    +cambiarPoliticaFlexible()
+}
+
+class PoliticaEstricta implements PoliticaRembolso{
+
+    +montoAReembolsar(LocalDate fecha, double montoAPagar): Real
+    +cambiarPoliticaEstricta()
+    +cambiarPoliticaModerada()
+    +cambiarPoliticaFlexible()
+}
+
+Reserva -up-> AutoEnAlquiler: auto 1
+Reserva -up-> Usuario: usuario 1
+Reserva -right-> PoliticaRembolso: politica 1
+Usuario -right-> AutoEnAlquiler: autos *
+
+@enduml

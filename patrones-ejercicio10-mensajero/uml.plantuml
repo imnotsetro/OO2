@@ -1,0 +1,30 @@
+@startuml
+
+class Mensajero{
+    +enviarRC4(String mensaje, String key)
+    +recibirRC4(String mensaje, String key)
+
+    +enviarFC(String mensaje, String key)
+    +recibirFC(String mensaje, String key)
+}
+
+abstract class Algoritmo{
+    +enviar(mensaje: String)
+    +recibir(mensaje: String)
+}
+
+class RC4 extends Algoritmo{
+    +encrypt(String mensaje, String key)
+    +decript(String mensaje, String key)
+}
+
+class FeisterCipher extends Algoritmo{
+    -key: String
+
+    +<create> FesitelCipher(String key)
+    +encode(String mensaje)
+}
+
+Mensajero -> Algoritmo: algoritmo 1
+
+@enduml

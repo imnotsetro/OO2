@@ -6,19 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="patrones-ejercicio10-mensajero" />
+        <module name="biblioteca" />
+        <module name="patrones-ejercicio8-dispositivo_movil_y_conexiones" />
+        <module name="biblioteca (2)" />
+        <module name="biblioteca (1)" />
+        <module name="ejercicio1-red_social" />
         <module name="ejercicio2-piedra_papel_o_tijera" />
         <module name="patrones-ejercicio7-calculadora" />
-        <module name="biblioteca" />
         <module name="patrones-ejercicio6-excursiones" />
-        <module name="patrones-ejercicio8-dispositivo_movil_y_conexiones" />
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
-        <module name="biblioteca (2)" />
         <module name="patrones-ejercicio3-media_player" />
-        <module name="biblioteca (1)" />
         <module name="patrones-ejercicio5-decodificador_de_peliculas" />
+        <module name="patrones-ejercicio9-alquiler_de_automoviles" />
         <module name="patrones-ejercicio4-todoitem" />
-        <module name="ejercicio1-red_social" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EncriptacionNuevo" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
