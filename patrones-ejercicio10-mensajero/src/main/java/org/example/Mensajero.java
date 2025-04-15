@@ -29,10 +29,10 @@ public class Mensajero {
 
     public static void main(String[] args) {
         Mensajero testMensajero = new Mensajero(new RC4Adapter(new RC4()));
-        String mensaje = testMensajero.enviar("Hola", "123456");
-        testMensajero.recibir(mensaje, "123456");
+        String mensaje = testMensajero.enviar("Hola", "dljasndjkbdjkwqbjkdsqjkbdqbwjkdbjqwkbdjkqwbdjkbqwjkdbqwjkdbqjwkbd");
+        testMensajero.recibir(mensaje, "dljasndjkbdjkwqbjkdsqjkbdqbwjkdbjqwkbdjkqwbdjkbqwjkdbqwjkdbqjwkbd");
         testMensajero.setAlgoritmo(new FCAdapter());
-        mensaje = testMensajero.enviar("Hola", "123456");
-        testMensajero.recibir(mensaje, "123456");
+        mensaje = testMensajero.enviar("Hola", "kSjdajSkeiMdjSahd");
+        testMensajero.recibir(mensaje, "kSjdajSkeiMdjSahd");
     }
 }
