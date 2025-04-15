@@ -2,6 +2,12 @@ package org.example;
 
 import java.util.List;
 
+
+/**
+ * No se como hacerlo, salta error por todos lados y no tiene
+ * sentido como incorporar algun estado o estrategia en esta
+ * clase
+ */
 public class FileSystem {
     private List<Elemento> contenido;
 
@@ -52,11 +58,9 @@ public class FileSystem {
      * Retorna el primer elemento con el nombre solicitado contenido en cualquier
      * nivel del filesystem
      */
-    public Elemento buscar(String nombre){
-        return contenido.stream()
-                .filter(e -> e.getNombre().equals(nombre))
-                .findFirst()
-                .orElse(null);
+    public Elemento buscar(String nombre) {
+        return null;
+        // No se como hacerlo
     }
 
     /**

@@ -1,0 +1,97 @@
+@startuml
+
+class Sandwich {
+    -pan: Pan
+    -aderezo: Aderezo;
+    -principal: Principal;
+    -adicional: Adicional;
+
+    +getPrecio(): double
+}
+
+interface Pan {
+    +getPrecio(): double
+}
+
+class PanBrioche implements Pan {
+    +getPrecio(): double
+}
+
+class PanConSemillas implements Pan {
+    +getPrecio(): double
+}
+
+class PanIntegral implements Pan {
+    +getPrecio(): double
+}
+
+class PanChipa implements Pan {
+    +getPrecio(): double
+}
+
+interface Aderezo {
+    +getPrecio(): double
+}
+
+class SinAderezo implements Aderezo {
+    +getPrecio(): double
+}
+
+class Mayonesa implements Aderezo {
+    +getPrecio(): double
+}
+
+class SalsaCriolla implements Aderezo {
+    +getPrecio(): double
+}
+
+class SalsaTartara implements Aderezo {
+    +getPrecio(): double
+}
+
+interface Principal{
+    +getPrecio(): double
+}
+
+class CarneTernera implements Principal {
+    +getPrecio(): double
+}
+
+class ProvoletaGrillada implements Principal {
+    +getPrecio(): double
+}
+
+class MilanesaDeGirgolas implements Principal {
+    +getPrecio(): double
+}
+
+class Pollo implements Principal {
+    +getPrecio(): double
+}
+
+interface Adicional {
+    +getPrecio(): double
+}
+
+class SinAdicional implements Adicional {
+    +getPrecio(): double
+}
+
+class VerdurasGrilladas implements Adicional {
+    +getPrecio(): double
+}
+
+class Tomate implements Adicional {
+    +getPrecio(): double
+}
+
+class BerenjenasAlEscabeche implements Adicional {
+    +getPrecio(): double
+}
+
+Sandwich -down-> Pan: pan 1
+Sandwich -down-> Aderezo: aderezo 1
+Sandwich -down-> Principal: principal 1
+Sandwich -down-> Adicional: adicional 1
+
+@enduml

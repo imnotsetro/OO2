@@ -1,6 +1,7 @@
 package org.example;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Archivo extends Elemento {
     private int tamano;
@@ -12,5 +13,9 @@ public class Archivo extends Elemento {
 
     public int getTamano() {
         return tamano;
+    }
+
+    public List<Elemento> getContenido() {
+        return null;
     }
 }
