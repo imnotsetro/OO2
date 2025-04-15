@@ -10,12 +10,8 @@ public class Mensajero {
         this.algoritmo = algoritmo;
     }
 
-    // PROBLEMA: Como puedo hacer que los dos destinatarios
-
-
     public String enviar(String mensaje, String key){
-        String mensajeEncriptado = algoritmo.enviar(mensaje, key);
-        return algoritmo.recibir(mensaje, key);
+        return algoritmo.enviar(mensaje, key);
     }
 
     public void recibir(String mensaje, String key){
@@ -32,10 +28,11 @@ public class Mensajero {
 
     public static void main(String[] args) {
         Mensajero testMensajero = new Mensajero(new RC4Adapter(new RC4()));
-        String mensaje = testMensajero.enviar("Hola", "dljasndjkbdjkwqbjkdsqjkbdqbwjkdbjqwkbdjkqwbdjkbqwjkdbqwjkdbqjwkbd");
+        String mensaje = testMensajero.enviar("Me encanta esta vaina, esta buenisimo", "dljasndjkbdjkwqbjkdsqjkbdqbwjkdbjqwkbdjkqwbdjkbqwjkdbqwjkdbqjwkbd");
+        System.out.println("Mensaje encriptado: " + mensaje);
         testMensajero.recibir(mensaje, "dljasndjkbdjkwqbjkdsqjkbdqbwjkdbjqwkbdjkqwbdjkbqwjkdbqwjkdbqjwkbd");
         testMensajero.setAlgoritmo(new FCAdapter());
-        mensaje = testMensajero.enviar("Hola", "kSjdajSkeiMdjSahd");
+        mensaje = testMensajero.enviar("Eu eu eu, bata, eu bata", "kSjdajSkeiMdjSahd");
         testMensajero.recibir(mensaje, "kSjdajSkeiMdjSahd");
     }
 
