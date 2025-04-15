@@ -1,0 +1,33 @@
+@startuml
+
+class FileSystem {
+    +tamanoTotalOcupado(): int
+    +archivoMasGrande(): Archivo
+    +archivoMasNuevo(): Archivo
+    +buscar(String nombre): Elemento
+    +buscarTodos(String nombre): List<Elemento>
+    +listadoDeContenido(): String
+}
+
+abstract class Elemento {
+    -nombre: String
+    -fechaCreacion: LocalDate
+
+    +getTamano(): int
+}
+
+class Archivo implements Elemento{
+    -nombre: String
+    -fechaCreacion: LocalDate
+    -tamano: int
+}
+
+class Directorio implements Elemento{
+    -nombre: String
+    -fechaCreacion: LocalDate
+    -contenido: List<Elemento>
+}
+
+FileSystem->Elemento: elementos * <STATE> ->
+
+@enduml
