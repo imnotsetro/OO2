@@ -10,6 +10,9 @@ public class Mensajero {
         this.algoritmo = algoritmo;
     }
 
+    // PROBLEMA: Como puedo hacer que los dos destinatarios
+
+
     public String enviar(String mensaje, String key){
         String mensajeEncriptado = algoritmo.enviar(mensaje, key);
         return algoritmo.recibir(mensaje, key);
@@ -35,4 +38,6 @@ public class Mensajero {
         mensaje = testMensajero.enviar("Hola", "kSjdajSkeiMdjSahd");
         testMensajero.recibir(mensaje, "kSjdajSkeiMdjSahd");
     }
+
+
 }
