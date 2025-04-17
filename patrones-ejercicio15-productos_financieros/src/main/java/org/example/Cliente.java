@@ -2,9 +2,19 @@ package org.example;
 
 abstract class Cliente {
 
-    public void comprarDolares(double monto);
+    public void comprarDolares(double monto) {
+        if (monto <= 0) {
+            throw new IllegalArgumentException("El monto debe ser mayor a 0.");
+        }
+        System.out.println("Compra de dólares realizada por un monto de: " + monto);
+    }
 
-    public void comprarPesos(double monto);
+    public void comprarPesos(double monto) {
+        if (monto <= 0) {
+            throw new IllegalArgumentException("El monto debe ser mayor a 0.");
+        }
+        System.out.println("Compra de pesos realizada por un monto de: " + monto);
+    }
 
     public abstract void invertirPlazoFijo(double monto, int plazoDias, double interesDiario);
 
