@@ -1,0 +1,47 @@
+@startuml
+
+class PrendaCombinada {
+
+    +calcularValor(): double
+    +calcularValorPrendario(): double
+}
+
+
+abstract class Prenda {
+    <CONSTRUCTOR>
+
+    +calcularValor(): double
+    +calcularLiquidez(): double
+}
+
+class Automovil implements Prenda {
+    -modelo: String
+    -kilometraje: double
+    -costo0km: double
+
+    +calcularValor(): double
+    +calcularLiquidez(): double
+}
+
+class Inmueble implements Prenda {
+    -direccion: String
+    -superficie: double
+    -costom2: double
+
+    +calcularValor(): double
+    +calcularLiquidez(): double
+}
+
+class Alquiler implements Prenda {
+    -comienzoContrato: LocalDate
+    -finContrato: LocalDate
+    -costoMensual: double
+
+    +calcularValor(): double
+    +calcularLiquidez(): double
+}
+
+PrendaCombinada -right-> Prenda: bienes *
+
+
+@enduml
