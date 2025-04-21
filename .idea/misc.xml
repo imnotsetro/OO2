@@ -25,10 +25,14 @@
         <option value="$PROJECT_DIR$/patrones-ejercicio13-subteway/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio14-prestamos_prendarios/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio15-productos_financieros/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio15-armado_de_pcs/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
+        <option value="$PROJECT_DIR$/filtros/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
         <option value="$USER_HOME$/Downloads/encriptadores/Encriptador/pom.xml" />
       </set>
     </option>

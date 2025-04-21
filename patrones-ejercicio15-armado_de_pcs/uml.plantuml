@@ -1,0 +1,33 @@
+@startuml
+
+class Catalogo {
+
+    +getComponente(descripcion: String): Componente
+    +crearBasico(): Computadora
+    +crearIntermedio(): Computadora
+    +crearGamer(): Computadora
+}
+
+class Componente {
+    - nombre: String
+    - descripcion: String
+    - precio: double
+    - consumo: double
+
+    +getNombre(): String
+    +getDescripcion(): String
+    +getPrecio(): double
+    +getConsumo(): double
+}
+
+class Computadora {
+
+    +calcularConsumo(): double
+    +calcularPrecio(): double
+}
+
+Catalogo -right-> Componente : <<BUILDER>> componentes *
+Computadora -up-> Componente : componentes *
+
+
+@enduml

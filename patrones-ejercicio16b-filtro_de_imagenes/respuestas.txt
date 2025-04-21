@@ -1,0 +1,17 @@
+
+3. Evalúe cuál de los siguientes patrones mejor describe el diseño de los Filtros: TemplateMethod, Strategy, Decorator.
+   Para realizar la evaluación se sugiere contestar las siguientes preguntas aplicadas a cada uno de los patrones:
+         a. ¿El objetivo del patrón se distingue en el diseño? Elabore en un párrafo.
+         b. ¿La estructura del proyecto coincide con la estructura y los participantes del patrón? Elabore en un párrafo.
+         c En el caso que el patrón coincida, puede distinguir un “smell” o algo que se aleja del patrón presentado en el libro?
+
+
+   RT:
+   El objetivo del patrón Strategy es definir una familia de algoritmos, encapsularlos en clases separadas y hacerlos
+   intercambiables. Este diseño se alinea con Strategy, ya que los filtros (Rainbow, Artifacter, etc.) encapsulan diferentes
+   algoritmos de procesamiento de imágenes y se seleccionan dinámicamente en PNGFilterLauncher.
+   La estructura del proyecto coincide con Strategy. La clase base Filter actúa como la interfaz común, y
+   las subclases implementan diferentes estrategias de filtrado. Además, el uso de un mapa para registrar y seleccionar filtros
+   refuerza esta idea.
+   Un posible "smell" es que la clase Filter no es una interfaz, sino una clase base,
+   lo que podría limitar la flexibilidad si se requiere herencia múltiple en el futuro.package ar.edu.info.oo2.filtros.imageFilters;
