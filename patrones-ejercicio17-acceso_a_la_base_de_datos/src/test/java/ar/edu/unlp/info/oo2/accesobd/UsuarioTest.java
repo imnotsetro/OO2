@@ -17,7 +17,7 @@ public class UsuarioTest {
     void setUp() {
         DatabaseAccess database = new DatabaseRealAccess();
         this.director = new Director(database);
-        this.usuario = new Usuario(false, director);
+        this.usuario = new Usuario(false);
     }
 
     @Test

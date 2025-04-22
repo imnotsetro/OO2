@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Usuario {
     private boolean autenticado;
-    private Director coneccion;
+    private DatabaseProxyAccess database;
 
-    public Usuario(boolean autenticado, Director coneccion) {
+    public Usuario(boolean autenticado) {
         this.autenticado = autenticado;
-        this.coneccion = coneccion;
+        this.database = new DatabaseProxyAccess(new DatabaseRealAccess(), this);
     }
 
     public boolean isAutenticado() {
@@ -20,19 +20,19 @@ public class Usuario {
         this.autenticado = autenticado;
     }
 
-    public Director getConeccion() {
-        return coneccion;
+    public DatabaseProxyAccess getDatabase() {
+        return database;
     }
 
-    public void setConeccion(Director coneccion) {
-        this.coneccion = coneccion;
+    public void setDatabase(DatabaseProxyAccess database) {
+        this.database = database;
     }
 
     public Collection<String> getSearchResults(String queryString) {
-        return coneccion.getSearchResults(queryString, this.autenticado);
+        return database.getSearchResults(queryString);
     }
 
     public int insertNewRow(List<String> rowData) {
-        return coneccion.insertNewRow(rowData, this.autenticado);
+        return database.insertNewRow(rowData);
     }
 }
