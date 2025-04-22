@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/patrones-ejercicio16b-filtro_de_imagenes/filtros_pipes.iml" filepath="$PROJECT_DIR$/patrones-ejercicio16b-filtro_de_imagenes/filtros_pipes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patrones-ejercicio16c-filtro_de_imagenes/patrones-ejercicio16c-filtro_de_imagenes.iml" filepath="$PROJECT_DIR$/patrones-ejercicio16c-filtro_de_imagenes/patrones-ejercicio16c-filtro_de_imagenes.iml" />
+    </modules>
+  </component>
+</project>

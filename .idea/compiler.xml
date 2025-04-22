@@ -12,6 +12,7 @@
         <module name="biblioteca (2)" />
         <module name="biblioteca (1)" />
         <module name="patrones-ejercicio14-prestamos_prendarios" />
+        <module name="accesobd" />
         <module name="patrones-ejercicio11-topografias" />
         <module name="patrones-ejercicio15-armado_de_pcs" />
         <module name="ejercicio1-red_social" />
@@ -30,8 +31,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="EncriptacionNuevo" target="11" />
-      <module name="patrones-ejercicio15-productos_financieros" target="11" />
-      <module name="patrones-ejercicio16-filtros_de_imagenes" target="11" />
+      <module name="patrones-ejercicio17-acceso_a_la_base_de_datos" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

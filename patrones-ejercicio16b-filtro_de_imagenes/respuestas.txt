@@ -1,0 +1,5 @@
+
+El diseño de los Pipes se alinea mejor con el patrón Decorator, ya que permite
+combinar filtros de manera dinámica y agregar funcionalidades en secuencia. Aunque
+también hay elementos del patrón Strategy (intercambiabilidad de filtros), la estructura
+y el comportamiento dinámico de los Pipes encajan más con Decorator.

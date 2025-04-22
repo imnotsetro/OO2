@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$USER_HOME$/Downloads/biblioteca/patrones-ejercicio1-friday_the_13th/src/main/java" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/biblioteca/patrones-ejercicio1-friday_the_13th/src/main/resources" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/encriptadores/Encriptador/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ejercicio1-red_social/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ejercicio1-red_social/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ejercicio2-piedra_papel_o_tijera/src/main/java" charset="UTF-8" />
@@ -21,7 +24,10 @@
     <file url="file://$PROJECT_DIR$/patrones-ejercicio15-armado_de_pcs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio16-filtro_de_imagenes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio16-filtro_de_imagenes/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/patrones-ejercicio17-acceso_a_la_base_de_datos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/patrones-ejercicio17-acceso_a_la_base_de_datos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/patrones-ejercicio17-acceso_a_la_base_de_datos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/patrones-ejercicio17-acceso_a_la_base_de_datos/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio1b-friday_the_13th/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio1b-friday_the_13th/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio2-calculo_de_sueldos/src/main/java" charset="UTF-8" />
@@ -40,9 +46,5 @@
     <file url="file://$PROJECT_DIR$/patrones-ejercicio8-dispositivo_movil_y_conexiones/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio9-alquiler_de_automoviles/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/patrones-ejercicio9-alquiler_de_automoviles/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/patrones-ejercicio_borrado-productos_financieros/src/main/resources" charset="UTF-8" />
-    <file url="file://$USER_HOME$/Downloads/biblioteca/patrones-ejercicio1-friday_the_13th/src/main/java" charset="UTF-8" />
-    <file url="file://$USER_HOME$/Downloads/biblioteca/patrones-ejercicio1-friday_the_13th/src/main/resources" charset="UTF-8" />
-    <file url="file://$USER_HOME$/Downloads/encriptadores/Encriptador/src/main/resources" charset="UTF-8" />
   </component>
 </project>

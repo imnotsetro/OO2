@@ -28,12 +28,15 @@
         <option value="$PROJECT_DIR$/patrones-ejercicio15-armado_de_pcs/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
         <option value="$PROJECT_DIR$/filtros/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio16-filtro_de_imagenes/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio17-acceso_a_la_base_de_datos/pom.xml" />
+        <option value="$PROJECT_DIR$/accesobd/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
         <option value="$USER_HOME$/Downloads/encriptadores/Encriptador/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
       </set>
     </option>
   </component>
