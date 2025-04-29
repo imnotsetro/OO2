@@ -44,7 +44,6 @@ public class FileOO2 implements Componente {
     }
 
     public String prettyPrint() {
-        //TODO: Implementar el método prettyPrint
-        return null;
+        return "";
     }
 }

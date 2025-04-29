@@ -2,6 +2,15 @@ package org.example;
 
 import java.time.LocalDate;
 
+/*
+    Decorator en este caso es necesario
+    debido a que los archivos deben
+    ser mostrados siguiendo distintas
+    estructuras.
+    Decorator permite la ejecucion en
+    orden.
+ */
+
 abstract public class Decorator implements Componente {
     private Componente componente;
 
@@ -37,5 +46,13 @@ abstract public class Decorator implements Componente {
     @Override
     public String getPermisos() {
         return componente.getPermisos();
+    }
+
+    public Componente getComponente() {
+        return componente;
+    }
+
+    public void setComponente(Componente componente) {
+        this.componente = componente;
     }
 }

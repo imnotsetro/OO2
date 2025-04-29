@@ -1,0 +1,79 @@
+@startuml
+
+interface WeatherData {
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+class HomeWeatherStation implements WeatherData {
+    -double temperaturaF
+    -double presion
+    -double radiacionSolar
+    -List<Double> temperaturasSensadas
+    +HomeWeatherStation(double temperaturaF, double presion, double radiacionSolar, List<Double> temperaturasSensadas)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+abstract class Decorator implements WeatherData {
+    -WeatherData data
+    +Decorator(WeatherData data)
+    +double getTemperaturaF()
+    +List<Double> getTemperaturasSensadas()
+    +WeatherData getData()
+    +void setData(WeatherData data)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+class DecoratorC extends Decorator {
+    +DecoratorC(WeatherData data)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+class DecoratorF extends Decorator {
+    +DecoratorF(WeatherData data)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+class DecoratorP extends Decorator {
+    +DecoratorP(WeatherData data)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+class DecoratorMM extends Decorator {
+    +DecoratorMM(WeatherData data)
+    +double getTemperatura()
+    +double getPresion()
+    +double getRadiacionSolar()
+    +List<Double> getTemperaturas()
+    +String displayData()
+}
+
+Decorator <-- DecoratorC
+Decorator <-- DecoratorF
+Decorator <-- DecoratorP
+Decorator <-- DecoratorMM
+
+@enduml
