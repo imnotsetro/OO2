@@ -1,0 +1,62 @@
+@startuml
+
+class Personaje {
+    -nombre: String
+    -armadura: Armadura
+    -arma: Arma
+    -habilidades: List<Habilidad>
+    -vida: int;
+
+    +atacar(Personaje personaje)
+    +recibirAtaque(Double vidaPerdida): double
+}
+
+interface Armadura {
+    +defenderContraEspada(): double
+    +defenderContraArco(): double
+    +defenderContraBaston(): double
+}
+
+class ArmaduraCuero implements Armadura {
+    +defenderContraEspada(): double
+    +defenderContraArco(): double
+    +defenderContraBaston(): double
+}
+
+class ArmaduraHierro implements Armadura {
+    +defenderContraEspada(): double
+    +defenderContraArco(): double
+    +defenderContraBaston(): double
+}
+
+class ArmaduraAcero implements Armadura {
+    +defenderContraEspada(): double
+    +defenderContraArco(): double
+    +defenderContraBaston(): double
+}
+
+interface Arma {
+    +atacar(Armadura armadura): double
+}
+
+class Espada implements Arma {
+    +atacar(Armadura armadura): double
+}
+
+class Arco implements Arma {
+    +atacar(Armadura armadura): double
+}
+
+class Baston implements Arma {
+    +atacar(Armadura armadura): double
+}
+
+class Habilidad {
+    -nombre: String
+}
+
+Personaje -down-> Armadura: armadura 1
+Personaje -down-> Arma: arma 1
+Personaje -down-> Habilidad: habilidades *
+
+@enduml
