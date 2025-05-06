@@ -1,0 +1,44 @@
+@startuml
+
+static class Builder {
+
+    +crearMamifero(identificador: int, especie: String, fechaNacimiento: LocalDate): Mamifero
+    +crearMamiferoPadres(identificador: int, especie: String, fechaNacimiento: LocalDate, Mamifero, Mamifero): Mamifero
+    +crearMamiferoAbuelos(identificador: int, especie: String, fechaNacimiento: LocalDate, Mamifero, Mamifero, Mamifero, Mamifero): Mamifero
+}
+
+
+class Mamifero {
+    -identificador: int
+    -especie: String
+    -fechaNacimiento: LocalDate
+
+    +getIdentificador(): int
+    +getEspecie(): String
+    +getFechaNacimiento(): LocalDate
+    +getPadre(): Mamifero
+    +getMadre(): Mamifero
+    +getAbueloMaterno(): Mamifero
+    +getAbueloPaterno(): Mamifero
+    +getAbuelaMaterno(): Mamifero
+    +getAbuelaPaterno(): Mamifero
+    +setIdentificador(identificador: int)
+    +setEspecie(especie: String)
+    +setFechaNacimiento(fechaNacimiento: LocalDate)
+    +setPadre(padre: Mamifero)
+    +setMadre(madre: Mamifero)
+    +setAbueloMaterno(abueloMaterno: Mamifero)
+    +setAbueloPaterno(abueloPaterno: Mamifero)
+    +setAbuelaMaterno(abueloMaterno: Mamifero)
+    +setAbuelaPaterno(abueloPaterno: Mamifero)
+}
+
+Mamifero --> Mamifero:padre
+Mamifero --> Mamifero:madre
+Mamifero --> Mamifero:abueloMaterno
+Mamifero --> Mamifero:abueloPaterno
+Mamifero --> Mamifero:abuelaMaterno
+Mamifero --> Mamifero:abuelaPaterno
+
+
+@enduml

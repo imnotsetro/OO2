@@ -34,6 +34,10 @@
         <option value="$PROJECT_DIR$/patrones-ejercicio18-file_manager/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio19-estacion_meteorologica/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio20-construccion_de_personajes_de_juegos_de_rol/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio21-genealogia_salvaje/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio22-monitoreo_de_linea_de_produccion/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio22B-monitoreo_de_linea_de_produccion/pom.xml" />
+        <option value="$PROJECT_DIR$/patrones-ejercicio23-acceso_bajo_demanda/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
