@@ -9,7 +9,7 @@
         <module name="patrones-ejercicio10-mensajero" />
         <module name="biblioteca" />
         <module name="biblioteca (1)" />
-        <module name="ejercicio1-red_social" />
+        <module name="frameworks-ejercicio1-singlethreadTCPframework" />
         <module name="patrones-ejercicio12-filesystem" />
         <module name="patrones-ejercicio6-excursiones" />
         <module name="patrones-ejercicio23-acceso_bajo_demanda" />
@@ -25,7 +25,6 @@
         <module name="accesobd" />
         <module name="patrones-ejercicio11-topografias" />
         <module name="patrones-ejercicio15-armado_de_pcs" />
-        <module name="ejercicio2-piedra_papel_o_tijera" />
         <module name="patrones-ejercicio18-file_manager" />
         <module name="patrones-ejercicio19-estacion_meteorologica" />
         <module name="patrones-ejercicio7-calculadora" />
@@ -37,6 +36,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ejercicio1-red_social" target="11" />
+      <module name="ejercicio2-piedra_papel_o_tijera" target="11" />
       <module name="EncriptacionNuevo" target="11" />
       <module name="patrones-ejercicio17-acceso_a_la_base_de_datos" target="11" />
     </bytecodeTargetLevel>
