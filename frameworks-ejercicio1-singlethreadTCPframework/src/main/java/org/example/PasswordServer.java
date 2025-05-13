@@ -11,7 +11,7 @@ public class PasswordServer extends SingleThreadTCPServer {
             // Dividir el mensaje en los tres argumentos
             String[] args = message.split(" ");
             if (args.length != 3) {
-                out.println("Error: Se requieren exactamente 3 argumentos (letras, números, caracteres especiales).");
+                out.println("Error: Se requieren exactamente 3 argumentos (letras, numeros, caracteres especiales).");
                 return;
             }
 
@@ -21,7 +21,7 @@ public class PasswordServer extends SingleThreadTCPServer {
 
             // Validar que los argumentos no estén vacíos
             if (letters.isEmpty() || numbers.isEmpty() || specialChars.isEmpty()) {
-                out.println("Error: Ningún argumento puede estar vacío.");
+                out.println("Error: Ningun argumento puede estar vacío.");
                 return;
             }
 
@@ -46,7 +46,7 @@ public class PasswordServer extends SingleThreadTCPServer {
         StringBuilder password = new StringBuilder();
         password.append(letter).append(number).append(specialChar);
 
-        for (int i = 3; i < 8; i++) {
+        for (int i = 3; i <= 8; i++) {
             password.append(allChars.charAt(random.nextInt(allChars.length())));
         }
 

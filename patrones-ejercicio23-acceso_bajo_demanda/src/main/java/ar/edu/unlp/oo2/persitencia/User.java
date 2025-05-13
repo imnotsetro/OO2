@@ -42,7 +42,7 @@ public class User implements PersistableUser {
 		return this.posts.getPosts(this.username);
 	}
 
-	// TODO: Como se debe agregar nuevos post al usuario utilizando
+	// Como se debe agregar nuevos post al usuario utilizando
 	// el repositorio de posts?
 
 //	public void addPost(Post post) {
