@@ -22,6 +22,7 @@
         <module name="biblioteca (2)" />
         <module name="patrones-ejercicio21-genealogia_salvaje" />
         <module name="patrones-ejercicio14-prestamos_prendarios" />
+        <module name="patrones-ejercicio22-monitoreo_de_linea_de_produccion (2)" />
         <module name="accesobd" />
         <module name="patrones-ejercicio11-topografias" />
         <module name="patrones-ejercicio15-armado_de_pcs" />
@@ -31,6 +32,7 @@
         <module name="patrones-ejercicio22-monitoreo_de_linea_de_produccion (1)" />
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
         <module name="filtros" />
+        <module name="persistencia" />
         <module name="patrones-ejercicio4-todoitem" />
         <module name="patrones-ejercicio22-monitoreo_de_linea_de_produccion" />
       </profile>

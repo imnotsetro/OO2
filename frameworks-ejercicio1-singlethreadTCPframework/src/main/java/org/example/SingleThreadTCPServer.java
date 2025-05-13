@@ -63,25 +63,23 @@ public abstract class SingleThreadTCPServer {
 
 
     private final void handleClient(Socket clientSocket) {
+
         try (
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
-
-            onClientConnected(clientSocket); // Hook: opcional, ejecutado al conectar un cliente
-
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                onMessageReceived(inputLine, clientSocket); // Hook: opcional, ejecutado al recibir un mensaje
+                this.beforeComunication(inputLine, clientSocket);
 
-                if (terminationStrategy.shouldTerminate(inputLine)) {
-                    break; // Cliente solicitó cerrar la conexión
+                if (this.terminationStrategy.shouldTerminate(inputLine)) {
+                    break; // Client requested to close the connection
                 }
                 handleMessage(inputLine, out);
             }
+            this.afterComunication(clientSocket);
 
-            onClientDisconnected(clientSocket); // Hook: opcional, ejecutado al desconectar un cliente
         } catch (IOException e) {
-            onError(clientSocket, e); // Hook: opcional, ejecutado en caso de error
+            System.err.println("Problem with communication with client: " + e.getMessage());
         } finally {
             try {
                 clientSocket.close();
@@ -91,20 +89,13 @@ public abstract class SingleThreadTCPServer {
         }
     }
 
-    // Métodos hook opcionales
-    protected void onClientConnected(Socket clientSocket) {
-        // Implementación opcional en subclases
+    protected void beforeComunication(String inputLine, Socket clientSocket) {
+        System.out.println("Received message: " + inputLine + " from "
+                + clientSocket.getInetAddress().getHostAddress() + ":" + clientSocket.getPort());
     }
 
-    protected void onMessageReceived(String message, Socket clientSocket) {
-        // Implementación opcional en subclases
-    }
-
-    protected void onClientDisconnected(Socket clientSocket) {
-        // Implementación opcional en subclases
-    }
-
-    protected void onError(Socket clientSocket, IOException e) {
-        // Implementación opcional en subclases
+    protected void afterComunication(Socket clientSocket) {
+        System.out.println("Connection closed with " + clientSocket.getInetAddress().getHostAddress() + ":"
+                + clientSocket.getPort());
     }
 }
