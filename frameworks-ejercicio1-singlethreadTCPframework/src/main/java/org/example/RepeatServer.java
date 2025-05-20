@@ -49,11 +49,9 @@ public class RepeatServer extends SingleThreadTCPServer {
     private String repeatString(String stringRepeat, int repeat, String delimit, PrintWriter out) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < repeat; i++) {
-            result.append(stringRepeat);
-            if (repeat - 1 != 0) {
-                result.append(delimit);
-            }
+            result.append(stringRepeat + delimit);
         }
+        result.deleteCharAt(result.length() - 1);
         return result.toString();
     }
 

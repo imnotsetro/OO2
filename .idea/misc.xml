@@ -39,6 +39,7 @@
         <option value="$PROJECT_DIR$/patrones-ejercicio22B-monitoreo_de_linea_de_produccion/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio23-acceso_bajo_demanda/pom.xml" />
         <option value="$PROJECT_DIR$/frameworks-ejercicio1-singlethreadTCPframework/pom.xml" />
+        <option value="$PROJECT_DIR$/frameworks-ejercicio2-java_logging/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

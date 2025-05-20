@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.accesobd;
+package ar.edu.unlp.info.oo2.accesobd.parteI;
 
 import java.util.Arrays;
 import java.util.Collection;

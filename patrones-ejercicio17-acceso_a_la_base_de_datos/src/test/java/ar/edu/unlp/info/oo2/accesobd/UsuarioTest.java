@@ -3,9 +3,13 @@ package ar.edu.unlp.info.oo2.accesobd;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import ar.edu.unlp.info.oo2.accesobd.parteI.DatabaseAccess;
+import ar.edu.unlp.info.oo2.accesobd.parteI.DatabaseRealAccess;
+import ar.edu.unlp.info.oo2.accesobd.parteI.Director;
+import ar.edu.unlp.info.oo2.accesobd.parteI.Usuario;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
