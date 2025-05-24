@@ -1,0 +1,12 @@
+May 24, 2025 1:10:43 PM Ejercicio1Application main
+WARNING: La cantidad de likes llegó a 0.
+May 24, 2025 1:10:43 PM Ejercicio1Application main
+WARNING: La cantidad de likes llegó a 10.
+May 24, 2025 1:18:17 PM org.example.parte2A.WallPostImpl like
+WARNING: La cantidad de likes llegó a 10.
+May 24, 2025 1:18:22 PM org.example.parte2A.WallPostImpl like
+WARNING: La cantidad de likes llegó a 10.
+May 24, 2025 1:18:24 PM org.example.parte2A.WallPostImpl dislike
+WARNING: La cantidad de likes llegó a 0.
+May 24, 2025 1:18:28 PM org.example.parte2A.WallPostImpl like
+WARNING: La cantidad de likes llegó a 10.
