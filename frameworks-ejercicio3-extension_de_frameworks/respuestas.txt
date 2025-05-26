@@ -1,0 +1,42 @@
+1)
+
+    a. Se deberia agregar una clase abstracta que contenga todas las fuentes de energia, con un metodo que se encargara
+    de consumir esa energia y hacer los cambios que son dependientes del tipo de energia, luego se crea las clases
+    que representan cada recurso de energia y extiende la clase del recurso de energia.
+
+    b. Teniendo en cuenta este sistema si, siempre y cuando existan setters que permitan modificar los atributos de las clases.
+
+    c. El nivel de carga lo pondria dentro de la clase que representa el recurso de energia del robot, esto es debido
+    a que el nivel de carga es un atributo que depende del tipo de energia que se este utilizando, por lo tanto es
+    recomendable que este atributo se encuentre dentro de la clase que representa el recurso de energia.
+    Esto implicaria que cada vez que se dispare el arma debe verificarse a partir de un metodo dentro del recurso
+    de energia si se tiene suficiente carga para disparar, y en caso de que no se tenga suficiente carga deberia
+    negarse la posibilidad de disparar.
+
+2)
+
+    a. De vuelta, como en el sistema de energia, se deberia crear una clase abstracta que represente la fuente
+    de locomocion, esta debe ser abstracta, la misma se encargara de definir el metodo "step" para que
+    aparezca el mensaje correspondiente. La clase deberia ser creada mas la clase traccion 4x4 y sus
+    dos clases anteriores que representaban dos fuentes de locomocion diferentes.
+    Aun asi, se deberia crear clases abstractas para las armas debido a que quedarian solas al no estar
+    sujetas mas a las locomociones.
+
+    b. En este sistema actual, teniendo en cuenta que es necesario tambien crear una clase especializada
+    en las armas, si, es posible siempre y cuando existan setters que permitan modificar los atributos de las clases.
+
+    c. Misma respuesta que C.
+
+3)
+
+    Herencia:
+    Ventajas: Permite reutilizar código, facilita la extensión de funcionalidades y la especialización de comportamientos.
+    Es simple de implementar cuando la relación es jerárquica.
+    Desventajas: Genera acoplamiento fuerte, dificulta el cambio de comportamiento en tiempo de ejecución y puede
+    llevar a jerarquías rígidas y difíciles de mantener.
+
+    Composición:
+    Ventajas: Favorece la reutilización flexible, permite cambiar comportamientos en tiempo de ejecución y reduce
+    el acoplamiento. Facilita la mantenibilidad y la extensión del sistema.
+    Desventajas: Puede requerir más código y planificación, y la delegación puede hacer el diseño más complejo de
+    entender inicialmente.

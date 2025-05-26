@@ -32,6 +32,7 @@
         <module name="patrones-ejercicio7-calculadora" />
         <module name="patrones-ejercicio22-monitoreo_de_linea_de_produccion (1)" />
         <module name="patrones-ejercicio2-calculo_de_sueldos" />
+        <module name="frameworks-ejercicio3-extension_de_frameworks" />
         <module name="filtros" />
         <module name="persistencia" />
         <module name="patrones-ejercicio4-todoitem" />
