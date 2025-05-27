@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.logging.Logger;
+
 /**
  * A WallpostTest is a test class for testing the behavior of Wallpost
  */
@@ -15,8 +17,8 @@ class WallPostTest {
 
   @BeforeEach
   void setUp() throws Exception {
-    wallPost = new WallPostImpl();
-    coolPost = new WallPostImpl();
+    wallPost = new WallPostImpl(Logger.getLogger("org.example.parte2A.WallPostTest"));
+    coolPost = new WallPostImpl(Logger.getLogger("org.example.parte2A.WallPostTest"));
     coolPost.like();
     coolPost.like();
     coolPost.like();

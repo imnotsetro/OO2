@@ -1,3 +1,5 @@
+package org.example.parte1B;
+
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 

@@ -5,35 +5,36 @@ import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
 public class WordFilterHandler extends Handler {
-    private final Handler wrappedHandler;
-    private final List<String> wordsToFilter;
+    private List<String> wordsToFilter;
+    private String replacementMessage;
 
-    public WordFilterHandler(Handler wrappedHandler, List<String> wordsToFilter) {
-        this.wrappedHandler = wrappedHandler;
+    public WordFilterHandler(List<String> wordsToFilter, String replacementMessage) {
         this.wordsToFilter = wordsToFilter;
+        this.replacementMessage = replacementMessage;
     }
 
+    /* * This handler filters log messages based on a list of words.
+     * If the message contains any of the words, it is remplace with
+     * replacementMessage.
+     */
     @Override
     public void publish(LogRecord record) {
-        if (record == null || !isLoggable(record)) {
-            return;
-        }
-
         String message = record.getMessage();
         for (String word : wordsToFilter) {
-            message = message.replaceAll(word, "***");
+            if (message.contains(word)) {
+                record.setMessage(replacementMessage);
+                break;
+            }
         }
-        record.setMessage(message);
-        wrappedHandler.publish(record);
     }
 
     @Override
     public void flush() {
-        wrappedHandler.flush();
+
     }
 
     @Override
     public void close() throws SecurityException {
-        wrappedHandler.close();
+
     }
 }
