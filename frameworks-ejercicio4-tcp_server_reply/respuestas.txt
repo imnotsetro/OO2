@@ -1,0 +1,49 @@
+Respecto a las dos formas vistas para implementar los servidores (PasswordServer ejercicio 1) iii) y 4) i) :
+
+¿Qué debe hacer un desarrollador para extender el framework en cada una de las formas?
+Especifique qué clases debe subclasificar o implementar, qué métodos debe definir.
+
+RT: Para extender el framework en la implementación iii) del PasswordServer, el desarrollador debe:
+1. Subclasificar la clase `PasswordServer` y sobreescribir el método `authenticate`.
+2. Implementar cualquier método adicional necesario para la lógica de autenticación específica.
+En la implementación 4) i), el desarrollador debe:
+1. Subclasificar la clase `PasswordServer` y sobreescribir el método `authenticate`.
+2. Implementar el método `configure` para definir la configuración del servidor.
+
+¿Cuánto conocimiento necesita tener el desarrollador sobre la estructura interna del framework para instanciarlo? ¿Y para  extenderlo?
+
+RT: Para instanciar el framework en la implementación iii), el desarrollador necesita un conocimiento básico de cómo funciona la clase
+`PasswordServer` y cómo se utiliza el método
+`authenticate`. Para extenderlo, necesita un conocimiento más profundo de la estructura
+ interna del framework, especialmente sobre cómo se manejan las configuraciones y
+ las extensiones de la clase.
+
+¿Qué técnica usarías si tuviera que ofrecer muchas configuraciones posibles para el servidor? ¿Por qué?
+
+RT: Si tuviera que ofrecer muchas configuraciones posibles para el servidor, usaría el patrón de diseño
+Builder. Este patrón permite crear objetos complejos paso a paso y es ideal para manejar múltiples
+configuraciones, ya que facilita la adición o modificación de parámetros sin afectar la estructura
+general del código.
+
+Identifique los hotspots y frozen spots en cada una de las implementaciones.
+
+RT: En la implementación iii) del PasswordServer:
+- Hotspots: El método `authenticate`, que es el punto donde se puede extender la funcionalidad del servidor.
+- Frozen spots: La estructura de la clase `PasswordServer` y sus métodos básicos, que no deberían ser modificados directamente.
+En la implementación 4) i) del PasswordServer:
+- Hotspots: El método `authenticate` y el método `configure`, que permiten la personalización del comportamiento del servidor.
+
+
+Considerando las dos formas de implementación del servidor PasswordServer, los programadores pueden
+asegurar que hay inversión de control? Justifique su respuesta identificando en qué parte se produce
+la inversión de control en cada uno de los casos.
+
+RT:Sí, los programadores pueden asegurar la inversión de control en ambas implementaciones del PasswordServer.
+En la implementación iii), la inversión de control se produce cuando el framework llama al método `authenticate` del desarrollador,
+permitiendo que este defina su propia lógica de autenticación sin tener que preocuparse por cómo se gestiona el flujo general del servidor.
+En la implementación 4) i), la inversión de control ocurre cuando el framework invoca el método `configure` y luego el método `authenticate`,
+permitiendo al desarrollador definir la configuración y la lógica de autenticación específica.
+En ambas implementaciones, el framework controla el flujo general del programa, mientras que el desarrollador proporciona la lógica específica,
+lo que es un claro ejemplo de inversión de control.
+
+

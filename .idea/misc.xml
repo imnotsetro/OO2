@@ -41,11 +41,14 @@
         <option value="$PROJECT_DIR$/frameworks-ejercicio1-singlethreadTCPframework/pom.xml" />
         <option value="$PROJECT_DIR$/frameworks-ejercicio2-java_logging/pom.xml" />
         <option value="$PROJECT_DIR$/frameworks-ejercicio3-extension_de_frameworks/pom.xml" />
+        <option value="$PROJECT_DIR$/frameworks-ejercicio4-tcp.server.reply/pom.xml" />
+        <option value="$PROJECT_DIR$/frameworks-ejercicio4-tcp_server_reply/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$USER_HOME$/Downloads/encriptadores/Encriptador/pom.xml" />
+        <option value="$PROJECT_DIR$/frameworks-ejercicio4-tcp.server.reply/pom.xml" />
         <option value="$PROJECT_DIR$/patrones-ejercicio16-filtros_de_imagenes/pom.xml" />
       </set>
     </option>
