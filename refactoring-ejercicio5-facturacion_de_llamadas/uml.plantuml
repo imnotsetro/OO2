@@ -1,0 +1,99 @@
+@startuml
+
+    interface TipoLlamada {
+        +getPrecio(duracion: int): double
+    }
+
+    class LlamadaNacional implements TipoLlamada {
+        +getPrecio(duracion: int): double
+    }
+
+    class LlamadaInternacional implements TipoLlamada {
+        +getPrecio(duracion: int): double
+    }
+
+    class Llamada {
+        -origen: String
+        -destino: String
+        -duracion: int
+
+        +getTipoDeLlamada(): TipoLlamada
+        +getRemitente(): String
+        +getDuracion(): int
+        +getOrigen(): String
+        +calcularMontoTotalLlamadas(): double
+    }
+
+    abstract class Cliente {
+        -nombre: String
+        -numeroTelefono: String
+
+        +getNombre(): String
+        +setNombre(nombre: String): void
+        +getNumeroTelefono(): String
+        +setNumeroTelefono(numeroTelefono: String): void
+        +getDescuento(valor: double, descuentoFis: double, descuentoJur: double): double
+    }
+
+    class ClienteFisico extends Cliente {
+        -dni: String
+
+        +getDni(): String
+        +setDni(dni: String): void
+        +getDescuento(valor: double, descuentoFis: double, descuentoJur: double): double
+    }
+
+    class ClienteJuridico extends Cliente {
+        -cuit: String
+
+        +getCuit(): String
+        +setCuit(cuit: String): void
+        +getDescuento(valor: double, descuentoFis: double, descuentoJur: double): double
+    }
+
+    class Empresa {
+
+        +agregarNumeroTelefono(str: String): boolean
+        +obtenerNumeroLibre(): String
+        +registrarUsuarioFisico(dni: String, nombre: String): Cliente
+        +registrarUsuarioJuridico(cuit: String, nombre: String): Cliente
+        +registrarLlamada(origen: Cliente, destino: Cliente, t: TipoLlamada, duracion: int): Llamada
+        +calcularMontoTotalLlamadas(cliente: Cliente): double
+        +cantidadDeUsuarios(): int
+        +existeUsuario(persona: Cliente): boolean
+        +getGestorNumeros(): GestorNumerosDisponibles
+    }
+
+    class GestorNumerosDisponibles {
+
+        +getLineas(): SortedSet<String>
+        +buscarNumero(str: String): boolean
+        +obtenerNumeroLibre(): String
+        +cambiarTipoGenerador(tipo: TipoGenerador): void
+    }
+
+    interface TipoGenerador {
+        +obtenerNumeroLibre(lineas: SortedSet<String>): String
+    }
+
+    class GeneradorPrimero implements TipoGenerador {
+        +obtenerNumeroLibre(lineas: SortedSet<String>): String
+    }
+
+    class GeneradorUltimo implements TipoGenerador {
+        +obtenerNumeroLibre(lineas: SortedSet<String>): String
+    }
+
+    class GeneradorRandom implements TipoGenerador {
+        +obtenerNumeroLibre(lineas: SortedSet<String>): String
+    }
+
+    Cliente -> "*" Llamada
+    Empresa -down-> "*" Cliente
+    Empresa -down-> "*" Llamada
+    Empresa -down-> "1" GestorNumerosDisponibles
+    GestorNumerosDisponibles -> "1" TipoGenerador
+    Llamada -> "1" TipoLlamada
+}
+
+@enduml

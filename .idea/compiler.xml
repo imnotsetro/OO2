@@ -11,7 +11,10 @@
         <module name="biblioteca" />
         <module name="biblioteca (1)" />
         <module name="frameworks-ejercicio1-singlethreadTCPframework" />
+        <module name="frameworks-ejercicio3-extension_de_frameworks (2)" />
+        <module name="facturacion_llamadas" />
         <module name="patrones-ejercicio12-filesystem" />
+        <module name="frameworks-ejercicio3-extension_de_frameworks (1)" />
         <module name="patrones-ejercicio6-excursiones" />
         <module name="patrones-ejercicio23-acceso_bajo_demanda" />
         <module name="patrones-ejercicio3-media_player" />
