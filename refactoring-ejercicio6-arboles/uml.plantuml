@@ -1,0 +1,45 @@
+@startuml
+
+interface IArbolBinario {
+    +int getValor()
+    +void setValor(int valor)
+    +IArbolBinario getHijoIzquierdo()
+    +void setHijoIzquierdo(IArbolBinario hijoIzquierdo)
+    +IArbolBinario getHijoDerecho()
+    +void setDerecha(IArbolBinario hijoDerecho)
+    +String recorrerPreorden()
+    +String recorrerInorden()
+    +String recorrerPostorden()
+}
+
+class ArbolBinario implements IArbolBinario {
+    -int valor
+
+    +ArbolBinario(int valor)
+    +int getValor()
+    +void setValor(int valor)
+    +IArbolBinario getHijoIzquierdo()
+    +void setHijoIzquierdo(IArbolBinario hijoIzquierdo)
+    +IArbolBinario getHijoDerecho()
+    +void setDerecha(IArbolBinario hijoDerecho)
+    +String recorrerPreorden()
+    +String recorrerInorden()
+    +String recorrerPostorden()
+}
+
+class ArbolBinarioNull implements IArbolBinario {
+    +int getValor()
+    +void setValor(int valor)
+    +IArbolBinario getHijoIzquierdo()
+    +void setHijoIzquierdo(IArbolBinario hijoIzquierdo)
+    +IArbolBinario getHijoDerecho()
+    +void setDerecha(IArbolBinario hijoDerecho)
+    +String recorrerPreorden()
+    +String recorrerInorden()
+    +String recorrerPostorden()
+}
+
+    ArbolBinario --> "hijoIzquierdo1" IArbolBinario
+    ArbolBinario --> "hijoDerecho1" IArbolBinario
+
+@enduml

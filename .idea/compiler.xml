@@ -10,6 +10,7 @@
         <module name="frameworks-ejercicio2-java_logging" />
         <module name="biblioteca" />
         <module name="biblioteca (1)" />
+        <module name="recorridoArboles" />
         <module name="frameworks-ejercicio1-singlethreadTCPframework" />
         <module name="frameworks-ejercicio3-extension_de_frameworks (2)" />
         <module name="facturacion_llamadas" />
