@@ -1,0 +1,80 @@
+@startuml
+
+class Indec {
+    +getIndiceInflacion(): double
+}
+
+abstract Prestamo {
+    - double monto
+    - int cantidadCuotas
+    - int cantidadCuotasPagadas
+    - double montoPagado
+    - double interes
+
+    + getValorCuota(): double
+    + getMontoPagado(): double
+    + getMontoFaltante(): double
+    + cancelarPrestamo(): double
+    + pagarCuota()
+}
+
+class PrestamoSimple extends Prestamo {
+    - double monto
+    - int cantidadCuotas
+    - int cantidadCuotasPagadas
+    - double montoPagado
+    - double interes
+
+    + getValorCuota(): double
+    + getMontoPagado(): double
+    + getMontoFaltante(): double
+    + cancelarPrestamo(): double
+    + pagarCuota()
+}
+
+class PrestamoUVA extends Prestamo {
+    - double monto
+    - int cantidadCuotas
+    - int cantidadCuotasPagadas
+    - double montoPagado
+    - double interes
+
+    + getValorCuota(): double
+    + getMontoPagado(): double
+    + getMontoFaltante(): double
+    + cancelarPrestamo(): double
+    + pagarCuota()
+}
+
+class Cliente {
+    - String nombre
+    - double salarioMensual
+
+    + solicitarPrestamoSimple(double montoSolicitado): PrestamoSimple
+    + solicitarPrestamoUVA(double montoSolicitado): PrestamoUVA
+}
+
+abstract EstadoPrestamo {
+    + pagarCuota()
+    + puedeCancelar(): boolean
+}
+
+class EstadoAceptado extends EstadoPrestamo {
+    + pagarCuota()
+    + puedeCancelar(): boolean
+}
+
+class EstadoRechazado extends EstadoPrestamo {
+    + pagarCuota()
+    + puedeCancelar(): boolean
+}
+
+class EstadoFinalizado extends EstadoPrestamo {
+    + pagarCuota()
+    + puedeCancelar(): boolean
+}
+
+Cliente -> Prestamo : prestamos *
+Prestamo -> EstadoPrestamo : estado 1
+
+@enduml
