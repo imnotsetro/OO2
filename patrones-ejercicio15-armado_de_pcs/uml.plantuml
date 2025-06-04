@@ -1,11 +1,51 @@
 @startuml
 
+class Director {
+    +crearPresupuesto(String nombre): Presupuesto
+}
+
 class Catalogo {
 
     +getComponente(descripcion: String): Componente
     +crearBasico(): Computadora
     +crearIntermedio(): Computadora
     +crearGamer(): Computadora
+}
+
+abstract Builder {
+    +setProcesador(): Componente
+    +setMemoriaRam(): Componente
+    +setDiscoDuro(): Componente
+    +setPlacaVideo(): Componente
+    +setFuentePoder(): Componente
+    +setGabinete(): Componente
+}
+
+abstract BuilderBasico extends Builder {
+    +setProcesador(): Componente
+    +setMemoriaRam(): Componente
+    +setDiscoDuro(): Componente
+    +setPlacaVideo(): Componente
+    +setFuentePoder(): Componente
+    +setGabinete(): Componente
+}
+
+abstract BuilderGamer extends Builder {
+    +setProcesador(): Componente
+    +setMemoriaRam(): Componente
+    +setDiscoDuro(): Componente
+    +setPlacaVideo(): Componente
+    +setFuentePoder(): Componente
+    +setGabinete(): Componente
+}
+
+abstract BuilderIntermedio extends Builder {
+    +setProcesador(): Componente
+    +setMemoriaRam(): Componente
+    +setDiscoDuro(): Componente
+    +setPlacaVideo(): Componente
+    +setFuentePoder(): Componente
+    +setGabinete(): Componente
 }
 
 class Componente {
@@ -20,14 +60,16 @@ class Componente {
     +getConsumo(): double
 }
 
-class Computadora {
+class Presupuesto {
 
     +calcularConsumo(): double
     +calcularPrecio(): double
 }
 
 Catalogo -right-> Componente : <<BUILDER>> componentes *
-Computadora -up-> Componente : componentes *
+Builder -right-> Catalogo : catalogo 1
+Presupuesto -up-> Componente : componentes *
+Director -right-> Builder : builder 1
 
 
 @enduml
