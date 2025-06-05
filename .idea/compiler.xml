@@ -33,6 +33,7 @@
         <module name="accesobd" />
         <module name="patrones-ejercicio11-topografias" />
         <module name="patrones-ejercicio15-armado_de_pcs" />
+        <module name="parcial-25-06-2022-patrones" />
         <module name="patrones-ejercicio18-file_manager" />
         <module name="patrones-ejercicio19-estacion_meteorologica" />
         <module name="frameworks-ejercicio4-tcp_server_reply" />

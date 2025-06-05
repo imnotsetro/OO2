@@ -9,22 +9,32 @@ import java.util.List;
     se puede agregar nuevos agregando nuevos metodos.
 */
 
-public class Builder {
+public abstract class Builder {
+    private Personaje personaje;
 
-    public Personaje crearGuerrero(){
-        return new Personaje("Guerrero", new ArmaduraAcero(), new Espada(), List.of(new Habilidad("Combate Cuerpo A Cuerpo")));
+    public Builder() {
+        this.personaje = new Personaje();
     }
 
-    public Personaje crearArquero(){
-        return new Personaje("Arquero", new ArmaduraCuero(), new Arco(), List.of(new Habilidad("Disparo de Flecha")));
+    public void reset() {
+        this.personaje = new Personaje();
     }
 
-    public Personaje crearMago(){
-        return new Personaje("Mago", new ArmaduraCuero(), new Baston(), List.of(new Habilidad("Magia"), new Habilidad("Combate a Distancia")));
+    public void setNombre(String nombre) {
+        this.personaje.setNombre(nombre);
     }
 
-    // El personaje Thoor es un personaje especial pedido en el inciso B
-    public Personaje crearThoor(){
-        return new Personaje("Thoor", new ArmaduraHierro(), new Martillo(), List.of(new Habilidad("Lanzar Rayor"), new Habilidad("Combate a Distancia")));
+    public void setVida() {
+        this.personaje.setVida(100);
+    }
+
+    public abstract void setArmadura();
+
+    public abstract void setArma();
+
+    public abstract void setHabilidades();
+
+    public Personaje getPersonaje() {
+        return this.personaje;
     }
 }

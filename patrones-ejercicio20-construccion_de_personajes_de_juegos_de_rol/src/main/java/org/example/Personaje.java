@@ -23,6 +23,9 @@ public class Personaje {
         this.habilidades = habilidades;
     }
 
+    public Personaje() {
+    }
+
     public String getNombre() {
         return nombre;
     }

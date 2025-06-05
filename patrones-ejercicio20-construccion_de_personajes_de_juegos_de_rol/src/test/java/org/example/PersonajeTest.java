@@ -8,13 +8,16 @@ public class PersonajeTest {
 
     @Test
     public void testAtaquesEntrePersonajes() {
-        Builder builder = new Builder();
+        Director director = new Director(new BuilderGuerrero());
 
         // Crear personajes
-        Personaje guerrero = builder.crearGuerrero();
-        Personaje arquero = builder.crearArquero();
-        Personaje mago = builder.crearMago();
-        Personaje thoor = builder.crearThoor();
+        Personaje guerrero = director.crearPersonaje("Guerrero");
+        director.setBuilder(new BuilderArquero());
+        Personaje arquero = director.crearPersonaje("Arquero");
+        director.setBuilder(new BuilderMago());
+        Personaje mago = director.crearPersonaje("Mago");
+        director.setBuilder(new BuilderThoor());
+        Personaje thoor = director.crearPersonaje("Thoor");
 
         // Vida inicial
         int vidaInicialGuerrero = guerrero.getVida();
